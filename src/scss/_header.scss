@@ -1,0 +1,98 @@
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(0,0,0,.3);
+  padding: 10px 0;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  > a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    &:hover {
+      color: #ccc;
+    }
+  }
+  .phone:before {
+    content: '';
+    display: block;
+    background: url("https://img.icons8.com/android/24/000000/phone.png") no-repeat center / contain;
+    position: absolute;
+    top: 2px;
+    left: -20px;
+    width: 16px;
+    height: 16px;
+  }
+  .mail:before {
+    content: '';
+    display: block;
+    background: url("https://img.icons8.com/ios/50/000000/important-mail.png") no-repeat center / contain;
+    position: absolute;
+    top: 2px;
+    left: -20px;
+    width: 16px;
+    height: 16px;
+  }
+}
+nav {
+  padding-top: 20px;
+}
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  &__item {
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+    margin-right: 20px;
+    &-mega:hover .nav-footer {
+      opacity: 1;
+      top: 100%;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: #000;
+    transition: color .2s linear;
+    padding: 5px 10px;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+.nav-footer {
+  width: 300%;
+  position: absolute;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all .2s linear;
+  //padding-top: 10px;
+  padding-bottom: 50px;
+  border-top: 1px solid #ccc;
+}
+.nav__link-bottom {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 15px;
+  transition: .3s linear;
+  &:hover {
+    color: #ccc;
+    cursor: pointer;
+  }
+}
