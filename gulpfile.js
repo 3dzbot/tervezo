@@ -67,7 +67,7 @@ function server() {
         server: "./"
     });
 
-    gulp.watch("./src/scss/*.scss", gulp.series('sass')).on('change', browserSync.reload);
+    gulp.watch("./src/scss/*_goods.scss", gulp.series('sass')).on('change', browserSync.reload);
     gulp.watch("./src/script/**/*.js", gulp.series('scripts')).on('change', browserSync.reload);
     gulp.watch("./src/*.html", gulp.series('html')).on('change', browserSync.reload);
     gulp.watch("./src/style/*.css", gulp.series('styles')).on('change', browserSync.reload);

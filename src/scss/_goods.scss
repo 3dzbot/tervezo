@@ -1,0 +1,20 @@
+.goods > .container {
+  position: relative;
+}
+.good {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #000;
+  & + h2 {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 60px;
+    bottom: -30px;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 10px;
+  }
+}
